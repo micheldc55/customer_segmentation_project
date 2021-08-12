@@ -69,6 +69,29 @@ Using the .describe() method for the data we realize that the age of the custome
 
 When we begin our EDA the first thing we need to do is visualize the data on its own to get a sense of the distribution if it is a numerical feature, and to get a sense of the predominance of each of the categories if it is a categorical feature.
 
+#### Numerical Features:
+
 When we plot both numerical features it becomes obvious that both distributions show a strong skew to the right, which is common amongst income and age data, due to it having a cut off point at zero.
 
-![plot1](./directory_1/directory_2/.../directory_n/plot.png)
+**Age feature distribution:**
+
+![plot1](https://github.com/micheldc55/customer_segmentation_project/blob/main/Age.png)
+
+**Income feature distribution:**
+
+![plot2](https://github.com/micheldc55/customer_segmentation_project/blob/main/Income.png)
+
+These features need to be preprocessed in some way. We solved this by using different types of transformations (mainly Logarithmic transformations and scikit learn's PowerTransformer) in order to remove the strong right skew.
+
+#### Categorical features:
+
+We conduct the same process for categorical features, and obtain the countplots for each. An example of what these countplots looks like is shown below. Running univariant countplots, we reach the following conclusions:
+
+- Customer genders are quite balanced
+- Marital status is also balanced
+- Most customers have highschool level education. There are only 1,8% graduate students. We could join both categories ('2' and '3') in a category called university & over
+- Both the 'Occupation' and 'Settlement size' features seem to have a larger enough quantity of instances of each category.
+
+![plot3](https://github.com/micheldc55/customer_segmentation_project/blob/main/Education.png)
+
+From the education feature plot above, we notice that there are only 1,8% graduate students (students with graduate level education). In a DataFrame that has only 2000 entries, this means that there are only 36 people with graduate studies in the dataset. So few instances may lead to worse results in the model, so we are joining them 
