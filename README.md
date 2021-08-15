@@ -75,7 +75,9 @@ The process is shown in greater detail in the notebook within this repository. B
 
 After carefull analysis of the data we reach some conclusions that were expected to come up when the clusters were determined. This are relationships we can see a priori within the data, such as: "People with Occupation = '0' (unemployed) tend to live in small cities within our customers". A lot of these relationships were found during the Exploratory Data Analysis and were used as a way to quickly assess the accuracy of the model. If you are interested in seeing this a priori results, they are included below.
 
-To determine the number of clusters to use, two metrics were combined: 'WSS' (Within-Sum-of-Squares) and 'Silhouette' scores. The two metrics were used to contrast the results of each method and to check if they were coherent. As you can see in the notebook, the actual result is  over 19 clusters. But there is a spike in the Silhouette scores at 6-7 clusters. If we consider this situation for a moment, there are 2000 customers in this dataset, so it is quite small. If we create more than 19 clusters with this data, we are probably not going to be feeding the model enough significant information within the training phase, and they won't perform well. Moreover, given the low quantity of features the model has, it will be easier to interpret the clusters if there are fewer of them.
+To determine the number of clusters to use, two metrics were combined: 'WSS' (Within-Sum-of-Squares) and 'Silhouette' scores. The two metrics were used to contrast the results of each method and to check if they were coherent. As you can see in the notebook, the actual result is  over 19 clusters. But there is a spike in the Silhouette scores at 6-7 clusters. If we consider this situation for a moment, there are 2000 customers in this dataset, so it is quite small. 
+
+If we create more than 19 clusters with this data, we are probably not going to be feeding the model enough significant information within the training phase, and they won't perform well. Moreover, given the low quantity of features the model has, it will be easier to interpret the clusters if there are fewer of them.
 
 Once this was determined, another interesting process was the interpretation aspect of the clusters. Clustering algorithms belong to the unsupervised machine learning classification, and as such there are no labels to identify which class does each point belong to. So interpretation in this type of problems can be tricky. To solve this in the problem, three methods were contrasted to see if all of them reached the same conslusions. 
 
@@ -129,11 +131,11 @@ All three methods show similar results when dealing with out data, so this is a 
 
 We can establish an even easier relationship between clusters and the customer they represent by giving them names, as you can see below. The names are just to give some easy to remember representation, they mean no harm of course and may be a little different from what the actual cluster represents.
 
-**Cluster 0:** 'The Overcomers'.        Single males who aren't educated but have a job in a medium sized city.
-**Cluster 1:** 'The Moms'.              Married females with no jobs or employees in small cities.
-**Cluster 2:** 'Women empowered'.       Married females with high educations and high income jobs, who live in medium/large cities
-**Cluster 3:** 'The Hotshots'.          Single males with high education and high income jobs from big cities.
-**Cluster 4:** 'Taken men'.             Married males
-**Cluster 5:** 'The small town Janes'.  Single females from small cities
+- **Cluster 0:** 'The Overcomers'.        Single males who aren't educated but have a job in a medium sized city.
+- **Cluster 1:** 'The Moms'.              Married females with no jobs or employees in small cities.
+- **Cluster 2:** 'Women empowered'.       Married females with high educations and high income jobs, who live in medium/large cities
+- **Cluster 3:** 'The Hotshots'.          Single males with high education and high income jobs from big cities.
+- **Cluster 4:** 'Taken men'.             Married males
+- **Cluster 5:** 'The small town Janes'.  Single females from small cities
 
 If the marketing team had a male, married customer, the model would immediatly assign him to **cluster 4**. Likewise, if the marketing team brought a female customer who is single and lives in a small city, the model would assign her to **cluster 5**.
