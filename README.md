@@ -19,8 +19,9 @@ This is a tool often used to visualize your clusters when the number of features
 - [Project Objective](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#project-objective)
   - [Libraries used](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#libraries-used)
 - [Process Overview](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#process-overview)
-- [Detailed Process](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#detailed-process)
-- []()
+  - [Steps taken in the process](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#steps-taken-through-the-process)
+  - [Results](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#results)
+- [Conclusions](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#conclusions)
 
 
 ## Project Objective
@@ -53,7 +54,7 @@ After conducting the necessary imports, we begin working with the data by import
 
 During the process of obtaining the customer groupings (or clusters) I went through a step-by-step process which allowed me to go from importing the data to finally interpreting the clusters in a continuous process. This doesn't mean that this is the only way to conduct a customer segmentation process, but the steps taken here are a good way to organize your process if you haven't done any clustering or segmentation before. 
 
-### Steps taken through the process:
+### Steps taken through the process
 
 The process is shown in greater detail in the notebook within this repository. Below there's an outline of the steps taken in the process, but I do encourage you to check them out in the notebook, where there is much more information avaliable.
 
@@ -80,7 +81,7 @@ Once this was determined, another interesting process was the interpretation asp
 
 These methods were:
 
-### 1) Building a Decision Tree Classifier around the now labeled data
+### 1. Building a Decision Tree Classifier around the now labeled data
 
 This is one of the preferred methods of mine when trying to interpret the results of a clustering algorithm. You build a Decision Tree model, which selects the best feature to split at and what is the best value to split at by using information gain and entropy/Gini. This means that using this method on the classes obtained by the clustering model will give us an insight on what are the features that give us most of the 'intel' on what features move the needle the most, granted that the Decision Tree is accurate at predicting the classes.
 
@@ -103,7 +104,7 @@ Each arrow on the left of each box represents the case where the condition at th
 | **Cluster 4** | Non-single + Males |
 | **Cluster 5** | Single + Small city + Female |
 
-### 2) Using centroid values as representative features of the cluster
+### 2. Using centroid values as representative features of the cluster
 
 The centroids give us a general idea of what the cluster represents. Below are the results of looking at the clusters' centroids and assigning the class that best fits the value in each; some features are not shown because they were determined to be non-significant in determining clusters, as shown in the notebook. The main disadvantage of using cluster centroids is that they only are representative in clusters with high compactness. The centroids are very sensible to points that are very disperse or have outliers.
 
@@ -116,7 +117,7 @@ The centroids give us a general idea of what the cluster represents. Below are t
 | C4 |	Male |	Married |	High-school or above |	Employee |	Small City |
 | C5 |	Female |	Single |	No Education |	Unemployed |	Medium City |
 
-### 3) Plotting the features' distributions/countplots for each cluster
+### 3. Plotting the features' distributions/countplots for each cluster
 
 The third method is, in my opinion, the hardest to interpret but it's also the only one were you take all data into account when making a decision. This is simply isolating each cluster on its own and running summary statistics on each one. This can be done here because the classes don't have too many possible outcomes and there is a small number of features, the complexity of interpretation raises with the number of features and number of classes in each variable.
 ![multiplot_cluster4_example](https://github.com/micheldc55/customer_segmentation_project/blob/main/cluster4_results.png)
@@ -135,4 +136,4 @@ We can establish an even easier relationship between clusters and the customer t
 **Cluster 4:** 'Taken men'.             Married males
 **Cluster 5:** 'The small town Janes'.  Single females from small cities
 
-If the marketing team now had a male, married customer, they would immediatly assign him to **cluster 4**. 
+If the marketing team had a male, married customer, the model would immediatly assign him to **cluster 4**. Likewise, if the marketing team brought a female customer who is single and lives in a small city, the model would assign her to **cluster 5**.
