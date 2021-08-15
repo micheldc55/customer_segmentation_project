@@ -16,12 +16,12 @@ This is a tool often used to visualize your clusters when the number of features
 
 # Table of Contents:
 
-- [Project Objective](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#project-objective)
-  - [Libraries used](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#libraries-used)
-- [Process Overview](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#process-overview)
-  - [Steps taken in the process](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#steps-taken-through-the-process)
-  - [Results](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#results)
-- [Conclusions](https://github.com/micheldc55/customer_segmentation_project/new/main?readme=1#conclusions)
+- [Project Objective](https://github.com/micheldc55/customer_segmentation_project#project-objective)
+  - [Libraries used](https://github.com/micheldc55/customer_segmentation_project#libraries-used)
+- [Process Overview](https://github.com/micheldc55/customer_segmentation_project#process-overview)
+  - [Steps taken in the process](https://github.com/micheldc55/customer_segmentation_project#steps-taken-through-the-process)
+  - [Results](https://github.com/micheldc55/customer_segmentation_project#results)
+- [Conclusions](https://github.com/micheldc55/customer_segmentation_project#conclusions)
 
 
 ## Project Objective
