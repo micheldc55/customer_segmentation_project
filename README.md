@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-In this project I create a customer segmentation model for Data obtained from Kaggle. Within the project I explore the features, visualize them, apply normalizations, review the data, create clusters, evaluate them and apply business-intelligence to the results.
+In this project I create a customer segmentation model for Data obtained from [Kaggle](https://www.kaggle.com/mrinaal007/know-your-customers-better/data). Within the project I explore the features, visualize them, apply normalizations, review the data, create clusters, evaluate them and apply business-intelligence to the results.
 
 The purpose of this project was to explore customer segmentation tools through clustering, using evaluation metrics and customer understanding through visualization to create insightful groups of customers that could be exploited in online marketing processes or similar tasks that require your customers to be grouped by their features.
 
